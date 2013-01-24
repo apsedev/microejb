@@ -14,7 +14,7 @@ public class AnnotationReader {
             System.out.println("field.getName() " + field.getName());
             System.out.println("field.getClass() " + field.getClass());
             System.out.println(field.getDeclaredAnnotations()[0]);
-            list.add(new WrappedField(field.getName(), field.getDeclaringClass(), field.getDeclaredAnnotations()[0].toString()));
+            list.add(new WrappedField(field.getName(), field.getType(), field.getDeclaredAnnotations()[0].toString()));
         }
 
         return list;

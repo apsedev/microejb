@@ -18,7 +18,7 @@ public class AnnotationReaderTest {
     @Test
     public void classWithSingleInjectAnnotation() throws Exception {
        AnnotationReader reader = new AnnotationReader();
-       WrappedField expected = new WrappedField("fieldToInject",String.class, "@Inject");
+       WrappedField expected = new WrappedField("fieldToInject",String.class, "@javax.inject.Inject()");
        assertThat(reader.readClass(SingleInject.class), is(Arrays.asList(expected)));
     }
     @Test
